@@ -14,10 +14,12 @@ This project is currently in a proof of concept state. Feel free to report any i
 npm i -g es-test-generator
 ```
 
+or just let node install it using npx
+
 ## Usage
 
 ```bash
-es-test-generator generate rootDir testFile modulePathExpression outputFile [argsNumber]
+npx es-test-generator generate rootDir testFile modulePathExpression outputFile [argsNumber]
 ```
 
 **rootDir** - Root directory of the project
@@ -31,11 +33,11 @@ See [module path expression examples](#Module-Path-Expression)
 
 **outputFile** - Path to the output test suite
 
-**argsNumber** - __optional__ A number of arguments passed to the tested function
+**argsNumber** - *optional* A number of arguments passed to the tested function
 
 Example:
 ```bash
-es-test-generator generate . test-file.js module ./output.test.js
+npx es-test-generator generate . test-file.js module ./output.test.js
 ```
 
 ## Module Path Expression
