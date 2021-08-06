@@ -1,6 +1,6 @@
 # ES Test Generator
 
-An automatic test suite generator utilizing the [ExpoSE](https://github.com/ExpoSEJS/ExpoSE) symbolic executor.
+An automatic Jest test suite generator utilizing the [ExpoSE](https://github.com/ExpoSEJS/ExpoSE) symbolic executor.
 
 This project is currently in a proof of concept state. Feel free to report any issues and submit pull requests.
 
