@@ -1,4 +1,4 @@
-import {extractConcreteValue} from "./expose.utils"
+import { extractConcreteValue } from './expose.utils'
 
 describe('expose-utils', () => {
   it.each([

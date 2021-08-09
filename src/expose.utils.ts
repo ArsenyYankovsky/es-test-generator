@@ -1,4 +1,4 @@
-import { isObject, mapValues } from "lodash"
+import { isObject, mapValues } from 'lodash'
 
 export const extractConcreteValue = (value: any): any => {
   if (isObject(value) && value.hasOwnProperty('concrete')) {

@@ -4,9 +4,10 @@ import { hideBin } from 'yargs/helpers'
 import { mkdirSync, existsSync, writeFileSync, rmSync, readFileSync, rmdirSync } from 'fs'
 import { resolve } from 'path'
 import { spawn } from 'child_process'
-import { extractConcreteValue } from "../src/expose.utils"
 import { isEmpty, times } from 'lodash'
 import { sync } from 'glob'
+
+import { extractConcreteValue } from '../src/expose.utils'
 
 interface TestCase {
   input: any[]
