@@ -1,7 +1,7 @@
 {
   "name": "es-test-generator",
   "description": "An automatic Jest test suite generator utilizing the ExpoSE symbolic executor.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "test-generator.js",
   "license": "MIT",
   "bin": {

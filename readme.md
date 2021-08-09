@@ -24,7 +24,7 @@ npx es-test-generator generate rootDir testFile modulePathExpression outputFile 
 
 **rootDir** - Root directory of the project
 
-**testFile** - File containing the function to generate tests for
+**testFile** - File to import test function from, relative to the project root
 
 **modulePathExpression** - 
 A JavaScript expression generator will use to locate the test function.

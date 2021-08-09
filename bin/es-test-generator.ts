@@ -106,7 +106,6 @@ const generateTestCases = async (projectRoot: string, workDirectory: string) => 
 }
 
 const generateTestFile = (workDirectory: string, filePath: string, callExpression: string, argsNumber: number) => {
-  // TODO: read number of arguments (or require it as a parameter in the first version?
   const content = `
     var fs = require('fs');
     var S$ = require('S$');
@@ -178,18 +177,18 @@ yargs(hideBin(process.argv))
   .command('generate <projectRoot> <fileName> <callExpression> <outputPath> [argsNumber]', 'generate tests', (yargs) => {
     return yargs
       .positional('projectRoot', {
-        describe: 'Project Directory Root',
+        describe: 'Root directory of the project',
       })
       .positional('fileName', {
         describe: 'File to import test function from, relative to the project root',
         type: 'string',
       })
-      .positional('callExpression', {
-        describe: 'Call Expression',
+      .positional('modulePathExpression', {
+        describe: 'A JavaScript expression generator will use to locate the test function.',
         type: 'string',
       })
-      .positional('outputPath', {
-        describe: 'Output Path',
+      .positional('outputFile', {
+        describe: 'Output File',
         type: 'string',
       })
       .positional('argsNumber', {
@@ -198,8 +197,8 @@ yargs(hideBin(process.argv))
         default: '1',
       })
   }, (argv) => {
-    const { projectRoot, fileName, callExpression, outputPath, argsNumber } = argv
-    generateTest(resolve(projectRoot as string), fileName as string, callExpression!, resolve(outputPath as string), Number(argsNumber))
+    const { projectRoot, fileName, modulePathExpression, outputFile, argsNumber } = argv
+    generateTest(resolve(projectRoot as string), fileName as string, modulePathExpression!, resolve(outputFile as string), Number(argsNumber))
   })
   .demandCommand().recommendCommands()
   .argv
